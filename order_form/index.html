@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Type your info</title>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <h1>Welcome to order page</h1>
+        <p>Write down your information</p>
+
+        <form id="order_form">
+
+            <label for="name">Name:</label>
+            <input autocomplete="off" id="name" type="text" placeholder="name" minlength="4" required>
+
+            
+            <label for="surname">Surname:</label>
+            <input autocomplete="off" id="surname" type="text" placeholder="surname" minlength="5" required>
+
+            
+            <label for="date">Date:</label>
+            <input autocomplete="off" id="date" type="date" value="1999-01-01" required>
+
+
+            <label for="street">Street:</label>
+            <input autocomplete="off" id="street" type="text" placeholder="street" minlength="5" required>
+
+            
+            <label for="house">House number:</label>
+            <input autocomplete="off" id="house" type="number" min="0" placeholder="house number" required>
+
+            <label for="flat">Flat number:</label>
+            <input id="flat" type="text" placeholder="flat number" pattern="\d([0-9 | -?])*" title="must be numbers and (-) between numbers" required>
+
+            <p>Choose the payment type:</p>
+            <label for="cash" class="payment_type">Cash</label>
+            <input autocomplete="off" type="radio" id="cash" name="payment" checked required>
+            <label for="credit" class="payment_type">Credit</label>
+            <input autocomplete="off" type="radio" id="credit" name="payment" required>
+            <br>
+            <button id="submitButton" disabled>Complete</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
